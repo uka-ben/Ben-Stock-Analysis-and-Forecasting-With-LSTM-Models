@@ -1,7 +1,7 @@
 streamlit
 matplotlib
 seaborn
-scipy == 1.10.0
+scipy 
 time
 datetime
 pandas
