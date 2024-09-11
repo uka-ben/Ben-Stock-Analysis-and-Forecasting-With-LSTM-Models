@@ -47,7 +47,7 @@ def Forecasting(stock):
             window = st.selectbox(label="Window Size" , options=[20,40,60,80,100,120,140,180])
         with col2 :
             optimizer = st.selectbox(label="Optimizer",options=["Adam", "SGD", "RMSprop", "Adagrad", "Adadelta"])
-            epochs = st.selectbox(label="Epochs",options=[1,10, 20, 30, 40, 50, 100, 200])
+            epochs = st.selectbox(label="Epochs",options=[1,3,5,10, 20, 30, 40, 50, 100, 200])
         with col3  :
             loss_function = st.selectbox(label="Loss Function",options=["mean_squared_error","mean_absolute_error", "huber_loss","mean_absolute_percentage_error"])
             batch_size = st.selectbox(label="Batch Size",options=[1,16, 32, 64, 128, 256])
