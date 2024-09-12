@@ -20,7 +20,7 @@ ticker= ticker_list['Ticker'].values
 ticker_map = {ticker: ticker + '.JK' for ticker in ticker}
 display_names = list(ticker_map.keys())
 
-selected_display_name = st.sidebar.selectbox('Pick a Stock for Analysis & Forecast',  options=display_names) 
+selected_display_name = st.sidebar.selectbox('Pick a Stock for Analysis & Forecast',  options=display_names , default = ['BBCA']) 
 stock_symbol = ticker_map[selected_display_name]
 
 
