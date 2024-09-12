@@ -43,7 +43,13 @@ if section == "📊 In-Depth Analysis" :
       analysis_multiple.multiply_alalysis(selected_symbols)
 
 elif section == "🔮 Future Trends Forecast":
-    forecasting.Forecasting(stock_symbol = stock_symbol)
+
+    tab1 , tab2 = st.tabs(["Forecast" , "Documentation"])
+
+    with tab1 : 
+        forecasting.Forecasting(stock_symbol = stock_symbol)
+    with tab2 : 
+        guide.Forecast()
 
 elif section == '⚙️ Customize LSTM Parameters':
     advance_forecasting.Forecasting(stock=stock_symbol)
