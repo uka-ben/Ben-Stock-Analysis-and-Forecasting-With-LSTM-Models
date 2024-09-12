@@ -52,7 +52,7 @@ def Forecasting(stock):
             loss_function = st.selectbox(label="Loss Function",options=["mean_squared_error","mean_absolute_error", "huber_loss","mean_absolute_percentage_error"])
             batch_size = st.selectbox(label="Batch Size",options=[1,16, 32, 64, 128, 256])
         
-        scaler = st.selectbox(label="Scaler",options=["StandardScaler", "MinMaxScaler", "RobustScaler", "Normalizer"])
+        scaler = st.selectbox(label="Scaler",options=["StandardScaler", "MinMaxScaler", "RobustScaler"])
 
 
     if st.button("Apply Model & Forecast Data") :
