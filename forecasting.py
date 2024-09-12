@@ -11,8 +11,6 @@ def Forecasting(stock_symbol):
     clean  = stock_symbol.replace(".JK" , " ")
     st.title(':blue[Stock Price Prediction Using LSTM]')
 
-    st.divider()
-
     st.markdown("""
        **This application provides a robust tool for forecasting future stock prices using advanced Long Short-Term Memory (LSTM) models.** 
 
