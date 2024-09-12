@@ -20,7 +20,7 @@ ticker= ticker_list['Ticker'].values
 ticker_map = {ticker: ticker + '.JK' for ticker in ticker}
 display_names = list(ticker_map.keys())
 
-selected_display_name = st.sidebar.selectbox('Select Stock Symbol', options=display_names)
+selected_display_name = st.sidebar.selectbox('Pick a Stock for Analysis & Forecast', options=display_names, value="BBCA") 
 stock_symbol = ticker_map[selected_display_name]
 
 
@@ -36,7 +36,7 @@ if section == "📊 In-Depth Analysis" :
     
     with tab2 : 
          
-      selected_display_names = st.sidebar.multiselect('Select Stock Symbols', options=display_names , max_selections=4 , default=display_names[:2])
+      selected_display_names = st.sidebar.multiselect('Pick a Stock for Multiple Analysis', options=display_names , max_selections=4 , default=display_names[:2])
 
       selected_symbols = [ticker_map[name] for name in selected_display_names]
 
