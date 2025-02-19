@@ -56,7 +56,7 @@ elif section == '⚙️ Customize LSTM Parameters':
     advance_forecasting.Forecasting(stock=stock_symbol)
 elif section == '📈 Stock Symbols' :
 
-    st.title(":green[Indonesia Stock]")
+    st.title(":red[Indonesia Stock]")
 
     search = st.text_input("Search : ")
     if st.button("Search"):
@@ -65,11 +65,11 @@ elif section == '📈 Stock Symbols' :
         elif len(ticker_list[ticker_list['Company Name'] == search]) > 0 : 
             st.table(ticker_list[ticker_list['Company Name'] == search])
         else :
-            st.error("The stock you're looking for is not found in the list.")
+            st.error("stock not available here.")
 
     st.table(ticker_list)
 else : 
-    st.title(":red[select section]")
+    st.title(":blue[select section]")
 
 
 
