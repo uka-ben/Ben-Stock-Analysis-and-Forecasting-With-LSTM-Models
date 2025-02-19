@@ -6,10 +6,10 @@ def Forecast():
     st.title("Stock Forecasting Page (LSTM)")
 
     st.header("Overview")
-    st.write("This page provides users with the ability to forecast stock prices using an LSTM (Long Short-Term Memory) model. LSTM is a type of recurrent neural network (RNN) that is particularly well-suited for time series data due to its ability to remember patterns over time. The model is trained on historical stock price data to predict future prices based on user-defined parameters.")
+    st.write("forecast stock prices using an LSTM (Long Short-Term Memory) model. LSTM is a type of recurrent neural network (RNN) that is particularly well-suited for time series data due to its ability to remember patterns over time. The model is trained on historical stock price data to predict future prices based on user-defined parameters.")
 
     st.header("Pre-set Parameters")
-    st.markdown("he LSTM model on this page comes with pre-configured parameters for ease of use. Users do not need to adjust these, as they have been optimized based on historical data. The pre-set parameters include:")
+    st.markdown("The LSTM model on this page comes with pre-configured parameters for ease of use. Users do not need to adjust these, as they have been optimized based on historical data. The pre-set parameters include:")
 
     st.markdown("- Number of epochs: 1 ")
     st.markdown("- Batch size: 1 ")
@@ -23,22 +23,23 @@ def Forecast():
 
 
     st.markdown("""
-    ## How to Use the Stock Forecasting Page
+    ## Stock Forecasting Guide
 
-    This page allows users to forecast stock prices by selecting a custom date range and choosing how many days they want to forecast into the future. The model will automatically split the data into training and testing sets, then train the LSTM model to predict the next days' prices.
+    This page helps you forecast stock prices by selecting a date range and specifying how many days ahead you want predictions. The model automatically splits the data, trains an LSTM model, and generates forecasts.
 
-    ### Steps:
+    ### How It Works:
 
-    1. **Select Date Range**: 
-    - Use the date picker to select the start and end dates of the stock data you want to use for the forecast. The selected range will be automatically divided into training and testing sets.
-    - The training data will include all data before the final selected date, and the test data will include the last portion of data.
+    1. **Select a Date Range**  
+       - Use the date picker to define the stock data period for analysis.  
+       - The model will split the data into training and testing sets.  
 
-    2. **Choose Forecasting Days**:
-    - Input how many days ahead you want to forecast. This number determines the length of the prediction, starting from the end of the test data.
+    2. **Set Forecasting Days**  
+       - Enter the number of future days to predict.  
 
-    3. **Click the Forecast Button**:
-    - Once you have selected the date range and the number of days to forecast, click the button to start the model. The LSTM model will automatically train on the selected data and provide a forecast for the specified number of days.
+    3. **Run the Forecast**  
+       - Click the "Forecast" button to train the model and generate predictions.  
 
-    4. **View Results**:
-    - The forecast results will be displayed in a line graph comparing the actual historical prices with the predicted future prices. Evaluation metrics such as MSE, RMSE, and MAE will also be shown to indicate the model’s performance.
-    """)
+    4. **View Results**  
+       - A line graph will display actual vs. predicted prices.  
+       - Metrics like MSE, RMSE, and MAE will assess model accuracy.  
+""")
