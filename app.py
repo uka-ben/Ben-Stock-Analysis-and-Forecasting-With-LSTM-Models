@@ -11,17 +11,17 @@ st.set_page_config(layout="wide")
 ticker_list = pd.read_csv("Ticker_list.csv")
 
 
-st.image("logo.png", caption="Don't Expect Profits Here.",use_column_width=True)
-section = st.sidebar.radio(
+st.image("logo.png", caption="My Name Is Benjamin Uka.",use_column_width=True)
+section = st.radio(
     "**Select Section:**", 
     options=["📊 In-Depth Analysis","🔮 Future Trends Forecast", "⚙️ Customize LSTM Parameters","📈 Stock Symbols"])
-st.sidebar.divider()
+st.divider()
 
 ticker= ticker_list['Ticker'].values
 ticker_map = {ticker: ticker + '.JK' for ticker in ticker}
 display_names = list(ticker_map.keys())
 
-selected_display_name = st.sidebar.selectbox('Pick a Stock for Analysis & Forecast',  options=display_names , index=1) 
+selected_display_name = st.selectbox('Pick a Stock for Analysis & Forecast',  options=display_names , index=1) 
 stock_symbol = ticker_map[selected_display_name]
 
 
@@ -37,7 +37,7 @@ if section == "📊 In-Depth Analysis" :
     
     with tab2 : 
          
-      selected_display_names = st.sidebar.multiselect('Pick a Stock for Multiple Analysis', options=display_names , max_selections=4 , default=display_names[:2])
+      selected_display_names = st.multiselect('Pick a Stock for Multiple Analysis', options=display_names , max_selections=4 , default=display_names[:2])
 
       selected_symbols = [ticker_map[name] for name in selected_display_names]
 
