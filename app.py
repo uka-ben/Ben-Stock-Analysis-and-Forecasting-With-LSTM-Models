@@ -11,7 +11,7 @@ st.set_page_config(layout="wide")
 ticker_list = pd.read_csv("Ticker_list.csv")
 
 
-st.image("logo.png", caption="My Name Is Benjamin Uka.",use_column_width=True)
+st.image("picture.png", caption="My Name Is Benjamin Uka.",use_column_width=True)
 section = st.radio(
     "**Select Section:**", 
     options=["📊 In-Depth Analysis","🔮 Future Trends Forecast", "⚙️ Customize LSTM Parameters","📈 Stock Symbols"])
